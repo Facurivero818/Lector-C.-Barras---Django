@@ -1,0 +1,19 @@
+.container{
+    position:relative;
+    padding-top: 120px;
+    min-height: 75%;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+#L{
+    font-size: 4rem;
+    color: #557D2B;
+}
+
+#C{
+    font-size: 4rem;
+    color: #E64814;
+}

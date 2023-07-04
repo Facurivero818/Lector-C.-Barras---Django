@@ -1,0 +1,45 @@
+{%extends "base.html"%}
+
+{%block css%}
+    <link rel="stylesheet" href="static/agregar.css">
+{%endblock css%}
+
+{%block contenido%}
+
+<div class = "container text-center">
+    <div><h1>Agregar Código</h1></div>
+    <div class = "respuesta d-flex align-items-center justify-content-center">
+        <h2>{{dato}}</h2>
+    </div>
+    <div>
+        <form method="POST" action="{% url 'agregar' %}">
+            {% csrf_token %}
+            <div class="form-row align-items-center">
+                <div class="col-md-2 d-inline-block">
+                <label class="input-group-text"  for="valor">Escanear código:</label>
+                </div>
+                <div class="col-md-9 d-inline-block">
+                <input class="form-control" name ="id" type="text" id="valor" >
+                </div>
+            </div>
+            <div class="form-check form-check-inline pt-4">
+                <input class="form-check-input" name="tipo" type="radio" id="inlineCheckbox1" checked value="reciclable">
+                <label class="form-check-label" for="inlineCheckbox1">Reciclable</label>
+            </div>
+            <div class="form-check form-check-inline pt-4">
+                <input class="form-check-input" name="tipo" type="radio" id="inlineCheckbox2" value="no reciclable">
+                <label class="form-check-label" for="inlineCheckbox2">No Reciclable</label>
+            </div>
+            <div><input class="btn btn-primary m-4 px-5" type="submit" id="aceptar" value = "Agregar"></div>
+        </form>
+    </div>
+</div>
+{%endblock contenido%}
+
+
+
+
+
+
+
+

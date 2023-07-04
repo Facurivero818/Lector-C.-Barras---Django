@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    box-sizing: border-box;
+
+}
+
+
+.footer{
+    position:relative;
+    width: 100vw;
+    display:flex;
+    flex-wrap: wrap;
+    height: 25%;
+    justify-content:space-evenly;
+    align-items: center;
+    background: linear-gradient(to right,transparent, #4752a4);    
+}
+
+.footer div img{
+  width: 200px;
+}
