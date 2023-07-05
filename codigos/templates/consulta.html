@@ -7,10 +7,11 @@
 {%block contenido%}
 
 <div class = "container text-center">
-    <div><h1>Consultar Código</h1></div>
-    <div class = "respuesta d-flex align-items-center justify-content-center">
-        <h2>{{dato}}</h2>
+    <div class = "respuesta d-flex align-items-center justify-content-center {{clase_css}}">
+        <h2>{{respuesta}}</h2>
     </div>
+   
+
     <div>
         <form method="POST" action="{% url 'consulta' %}">
             {% csrf_token %}
@@ -19,7 +20,7 @@
                 <label class="input-group-text"  for="valor">Escanear código:</label>
               </div>
               <div class="col-md-9 d-inline-block">
-                <input class="form-control" type="text" id="valor" name ="valor" >
+                <input class="form-control" type="text" id="valor" name ="valor" autofocus >
               </div>
             </div>
             <input class="btn btn-primary m-4 px-5" type="submit" id="aceptar" value = "Consultar">

@@ -8,8 +8,8 @@
 
 <div class = "container text-center">
     <div><h1>Eliminar Código</h1></div>
-    <div class = "dato">
-        <p>{{respuesta}}</p>
+    <div class = "respuesta d-flex align-items-center justify-content-center">
+        <h2>{{respuesta}}</h2>
     </div>
     <div>
         <form method="POST" action="{% url 'eliminar' %}">
@@ -19,7 +19,7 @@
                 <label class="input-group-text"  for="valor">Escanear código:</label>
               </div>
               <div class="col-md-9 d-inline-block">
-                <input class="form-control" type="text" id="valor" >
+                <input class="form-control" type="text" id="valor" name ="id" autofocus>
               </div>
             </div>
             <input class="btn btn-primary m-4 px-5" type="submit" id="aceptar" value = "Eliminar">
